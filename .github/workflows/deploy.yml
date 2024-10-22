@@ -3,14 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust if your main branch is different
+      - main  # Or your preferred branch
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: '18'  # Adjust according to your project's Node.js version
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies with legacy-peer-deps
+        run: npm install --legacy-peer-deps  # This resolves the peer dependency conflicts
 
       - name: Build project
-        run: npm run build  # This will now run next build && next export
+        run: npm run build  # This will run next build && next export
 
       - name: Deploy to sert121.github.io
         run: |
