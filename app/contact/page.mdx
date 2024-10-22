@@ -1,0 +1,24 @@
+import { AnimatedName } from '@/app/n/animated-name.tsx';
+import { Link } from 'next-view-transitions';
+
+export const metadata = {
+  title: 'Music',
+  alternates: {
+    canonical: '/contact',
+  },
+};
+
+
+export function Small({ children }) {
+  return (
+    <small className="flex text-sm text-gray-500 -mt-3 mb-3">{children}</small>
+  );
+}
+
+
+## Contact
+<AnimatedName />
+
+
+Feel free to reach me out at <Link className="text-blue-500 hover:text-blue-700" href="https://www.linkedin.com/in/yashmore427">Linkedin</Link>, <Link className="text-blue-500 hover:text-blue-700" href="https://twitter.com/yash_347">Twitter</Link>, or better, shoot me an <Link className="text-blue-500 hover:text-blue-700" href="mailto:yash.more@alumni.ashoka.edu.in">email</Link>.    
+Always happy to chat!

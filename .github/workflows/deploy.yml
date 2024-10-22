@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust if your main branch is different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # Adjust according to your project's Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build  # This will now run next build && next export
+
+      - name: Deploy to sert121.github.io
+        run: |
+          git config --global user.name "sert121"
+          git config --global user.email "yashrajmore29@gmail.com"
+          git clone https://sert121:${{ secrets.GH_TOKEN }}@github.com/sert121/sert121.github.io.git
+          cd sert121.github.io
+          rm -rf *  # Remove old files
+          cp -r ../out/* .  # Copy the new build from 'out' directory
+          git add .
+          git commit -m "Deploy website"
+          git push origin main  # Push to the GitHub Pages repo

@@ -13,14 +13,13 @@
 This application requires Node.js v18.17+.
 
 ```bash
-git clone https://github.com/leerob/site.git
+git clone https://github.com/sert121/website.git
 cd site
 bun install
 bun run delete # Remove all of my notes
 bun dev
 ```
 
-Optional: Create a `.env.local` file with your `POSTGRES_URL` environment variable to store redirects.
 
 ## Database Schema
 
@@ -34,9 +33,4 @@ CREATE TABLE redirects (
 ```
 
 ## License
-
-1. You are free to use this code as inspiration.
-2. Please do not copy it directly.
-3. Crediting the author is appreciated.
-
-Please remove all of my personal information by running `bun run delete`.
+Credits to leerob.io

@@ -7,15 +7,15 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.com'),
+  metadataBase: new URL('https://sert121.github.io'),
   alternates: {
     canonical: '/',
   },
   title: {
-    default: 'Lee Robinson',
-    template: '%s | Lee Robinson',
+    default: 'Yash More',
+    template: '%s | Yash More',
   },
-  description: 'Frontend developer, optimist, community builder.',
+  description: 'Researcher, developer, artist.',
 };
 
 export default function RootLayout({
@@ -42,27 +42,29 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@leerob', url: 'https://x.com/leeerob' },
-    { name: 'youtube', url: 'https://www.youtube.com/@leerob' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/leeerob' },
-    { name: 'github', url: 'https://github.com/leerob' },
+    { name: 'google scholar', url: 'https://scholar.google.com/citations?user=nm8G-yoAAAAJ&hl=en'},
+    {name: 'work', url: '/work'},
+    {name:'contact', url: '/contact'},
+    // {name:'fragments', url: '/fragments'},
+    { name: 'github', url: 'https://github.com/sert121' },
+
   ];
 
   return (
-    <footer className="mt-12 text-center">
-      <div className="flex justify-center space-x-4 tracking-tight">
-        {links.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
-          >
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </footer>
+<footer className="mt-12 text-center">
+  <div className="flex justify-center space-x-4 tracking-tight">
+    {links.map((link) => (
+      <a
+        key={link.name}
+        href={link.url}
+        target={link.name === 'work' ? '_self' : '_blank'}
+        rel={link.name === 'work' ? undefined : 'noopener noreferrer'}
+        className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+      >
+        {link.name}
+      </a>
+    ))}
+  </div>
+</footer>
   );
 }
