@@ -45,6 +45,7 @@ function Footer() {
     { name: 'google scholar', url: 'https://scholar.google.com/citations?user=nm8G-yoAAAAJ&hl=en'},
     {name: 'work', url: '/work'},
     {name:'contact', url: '/contact'},
+    {name:'publications', url: '/publications'},
     // {name:'fragments', url: '/fragments'},
     { name: 'github', url: 'https://github.com/sert121' },
 
@@ -57,8 +58,8 @@ function Footer() {
       <a
         key={link.name}
         href={link.url}
-        target={link.name === 'work' ? '_self' : '_blank'}
-        rel={link.name === 'work' ? undefined : 'noopener noreferrer'}
+        target={link.name === 'work' || link.name === 'publications' || link.name === 'contact' ? '_self' : '_blank'}
+        rel={link.name === 'work' || link.name === 'publications' || link.name === 'contact' ? undefined : 'noopener noreferrer'}
         className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
       >
         {link.name}
