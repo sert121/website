@@ -42,12 +42,13 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
+    {name:'whereabouts', url: '/whereabouts'},
     { name: 'google scholar', url: 'https://scholar.google.com/citations?user=nm8G-yoAAAAJ&hl=en'},
     {name: 'work', url: '/work'},
-    {name:'contact', url: '/contact'},
+    {name:'chat', url: '/chat'},
     {name:'publications', url: '/publications'},
     // {name:'fragments', url: '/fragments'},
-    { name: 'github', url: 'https://github.com/sert121' },
+    {name:'twitter', url: 'https://x.com/yash_347'},
 
   ];
 
@@ -58,7 +59,7 @@ function Footer() {
       <a
         key={link.name}
         href={link.url}
-        target={link.name === 'work' || link.name === 'publications' || link.name === 'contact' ? '_self' : '_blank'}
+        target={link.name === 'work' || link.name === 'chat' || link.name === 'whereabouts' || link.name === 'publications' || link.name === 'contact' ? '_self' : '_blank'}
         rel={link.name === 'work' || link.name === 'publications' || link.name === 'contact' ? undefined : 'noopener noreferrer'}
         className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
       >

@@ -40,11 +40,11 @@ export default function Home() {
       <div className="text-gray-800 space-y-4 leading-snug">
         <p>
         I’m a researcher and a graduate student at McGill University and Mila, where I’m fortunate to be advised by Golnoosh Farnadi.
-        I’m currently interested in the broad areas of alignment, reasoning, and <Link href='/evals' className='text-blue-500 hover:text-blue-700'>evaluation</Link> of current ml systems (read: LLMs). 
+        I’m currently interested in the broad areas of alignment, reasoning, and <Link href='/evals' className='text-blue-500 hover:text-blue-700'>evaluation</Link> of foundational models (read: LLMs). 
         </p>
 
         <p>
-        I tend to wear multiple hats, and have spent some time on designing, creating and opining on software. 
+        I tend to wear multiple hats, and have spent some time on designing, creating and opining on ML algos and software. 
         Previously, I <Link href="/work" className="text-blue-500 hover:text-blue-700"> worked </Link> with <Link className ="underline underline-offset-2" href="https://www.nextcanada.com/next-ai/">NextAI</Link>, <Link href="defog.ai" className ="underline underline-offset-2" >Defog</Link>, <Link href="https://www.tribe.ai/" className ="underline underline-offset-2" >TribeAI</Link>, <Link  className ="underline underline-offset-2" href="https://dresslife.com/">dresslife</Link>,
         dabbling in ml and software-engg roles.
         </p>
