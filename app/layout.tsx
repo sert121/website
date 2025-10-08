@@ -45,8 +45,8 @@ function Footer() {
     {name:'whereabouts', url: '/whereabouts'},
     { name: 'google scholar', url: 'https://scholar.google.com/citations?user=nm8G-yoAAAAJ&hl=en'},
     {name: 'work', url: '/work'},
-    {name:'chat', url: '/chat'},
-    {name:'publications', url: '/publications'},
+    {name: 'chat', url: '/chat'},
+    {name:'pubs', url: '/publications'},
     // {name:'fragments', url: '/fragments'},
     {name:'twitter', url: 'https://x.com/yash_347'},
 
